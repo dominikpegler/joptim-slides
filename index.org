@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       dae7ee8b-4424-404a-be4c-df415e5abab7
+:END:
+#+title: Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems
+#+project: presentation JOptim 2024
+#+created: [2024-09-26 Thu]
+#+last_modified: [2024-09-26 Thu 21:21]
+#+author: Dominik Pegler
+#+date: 2024-09-16
+# +REVEAL_TITLE_SLIDE_BACKGROUND: "https://example.com/background.jpg"
+# +REVEAL_ROOT: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/a
+# +REVEAL_VERSION: 3.6.0
+#+REVEAL_THEME: white
+#+REVEAL_TRANS: none
+#+REVEAL_TITLE_SLIDE:<div style="display:flex;flex-direction:column;"><img src="img/logo_univie.png" width="240px" style="margin:0;"/><div ><h3>%t</h3><p>%d</p><p>%a</p></div></div>
+#+REVEAL_MARGIN: 0.1 
+# +reveal_slide_footer: <div>Footer</div>
+#+reveal_single_file: t
+#+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number: t
+#+BIBLIOGRAPHY: /home/user/Dropbox/org/ref/ref.bib
+#+cite_export: csl
+#+REVEAL_HTML_HEAD: <style> /* Import custom fonts as needed */ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); body {font-family: 'Roboto', sans-serif;} h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif; font-weight: 700; /* Use bold for headings */} p {font-family: 'Roboto', sans-serif; font-weight: 400;} </style>
+
+* Problem Setting
+
+#+begin_notes
+Today, I am going to present you a new study on the topic of human-machine colaboration.
+#+end_notes
+
+#+REVEAL_HTML: <div style="float: left; width: 80%">
+*Machine Problem-Solving*
+#+ATTR_REVEAL: :frag (t)
+  - Increasingly taking over human domains
+  - Recent years: GenAI \to black boxes \to lack of trust
+#+ATTR_REVEAL: :frag (t)
+*Interpretability*
+#+ATTR_REVEAL: :frag (t)
+  - Trust issues are old problem (1950s) 
+  - Solution: Human-in-the-loop approach to evaluate human interpretability
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="float: right; width: 20%">
+
+#+HTML_ATTR: :width 100px
+ file:./img/logo_univie.png
+
+ #+REVEAL_HTML: </div>
+* example with grid
+#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto auto;">
+
+#+ATTR_HTML: :width 200px
+file:./img/logo_univie.png
+- AAA
+- BBB
+- CCC
+- DDD
+#+REVEAL_HTML: <div>
+- EEE
+- FFF
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+* Source code
+#+begin_src python -n :results output
+import numpy as np
+
+np.random.seed(12)
+x = np.random.randint(100)
+print(x)
+#+end_src
+
+#+RESULTS:
+: 75
+
+* Equations
+  - Here is an inline equation: \( E = mc^2 \).
+  - Here is a displayed equation:
+    \[
+    a^2 + b^2 = c^2
+    \]
+* Use References
+
+- [cite:@ottSimplifExSimplifyingExplaining2023]
+- [cite:@lageHumanintheloopInterpretabilityPrior2018]
+- [cite:@wynnLearningHumanlikeRepresentations2023]
+- [cite:@murawskiHowHumansSolve2016]
+- [cite:@francoTaskindependentMetricsComputational2022]
+- [cite:@dumnicPathGameCrowdsourcingTimeconstrained2019]
+- [cite:@macgregorHumanPerformanceTraveling2011]
+
+* References
+   :PROPERTIES:
+   :CUSTOM_ID: bibliography
+   :END:
+
+
+   
+#+print_bibliography:
