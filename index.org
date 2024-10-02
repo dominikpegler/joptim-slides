@@ -42,7 +42,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+REVEAL_HTML: <div style="float: right; width: 20%">
 
 #+HTML_ATTR: :width 100px
- file:./img/logo_univie.png
+#+caption: George Dantzig, father of linear programming (Source: [[https://malevus.com/george-dantzig][malevus.com]]).
+ file:./img/dantzig.jpg
 
  #+REVEAL_HTML: </div>
 * example with grid
