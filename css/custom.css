@@ -8,6 +8,7 @@
 h2 {
     position: fixed !important;
     top: 0 !important; /* Ensure no unwanted margin is added on top */
+    color: #0063a6 !important;
 }
 
 .custom-title-div {
