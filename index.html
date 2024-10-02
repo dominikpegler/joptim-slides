@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="./reveal.js/dist/theme/white.css" id="theme"/>
 
 <link rel="stylesheet" href="css/custom.css"/>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body>
 <div class="reveal">
@@ -21,8 +20,8 @@
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems</h3><p style="margin-top:4rem;">D. Pegler, D. Steyrl, F. Scharnowski, &amp; F. Melinscak</p></div></div>
 </section>
 <section>
-<section id="slide-org56143ad">
-<h2 id="org56143ad">Problem Setting</h2>
+<section id="slide-orgc9854b8">
+<h2 id="orgc9854b8">Problem Setting</h2>
 <aside class="notes">
 <p>
 Today, I am going to present you a new study on the topic of human-machine colaboration.
@@ -37,21 +36,22 @@ Today, I am going to present you a new study on the topic of human-machine colab
 <ul>
 <li class="fragment">Increasingly taking over human domains</li>
 <li class="fragment">Recent years: GenAI &rarr; black boxes &rarr; lack of trust</li>
+<li class="fragment">Trust issues not new (Classical AI in 1950s)</li>
 
 </ul>
 <p class="fragment (t)">
 <b>Interpretability</b>
 </p>
 <ul>
-<li class="fragment">Trust issues are old problem (1950s)</li>
-<li class="fragment">Solution: Human-in-the-loop approach to evaluate human interpretability</li>
+<li class="fragment">Human-in-the-loop approach to evaluate human interpretability</li>
+<li class="fragment">Important for trust and improving colaboration with machines</li>
 
 </ul>
 </div>
 <div style="float: right; width: 20%">
 
 
-<div id="orgf81fbff" class="figure">
+<div id="org29b054b" class="figure">
 <p><img src="./img/dantzig.jpg" alt="dantzig.jpg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>George Dantzig, father of linear programming (Source: <a href="https://malevus.com/george-dantzig">malevus.com</a>).</p>
@@ -61,64 +61,46 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-orga23f42f">
-<h2 id="orga23f42f">example with grid</h2>
-<div style="display: grid; grid-template-columns: auto auto auto;">
+<section id="slide-org493bedf">
+<h2 id="org493bedf">Combinatorial Problem Solving</h2>
+<div style="display:flex;flex-direction:column;height: 100%">
+<div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 
+<div id="org57b97e2" class="figure">
+<p><img src="./svg/knapsack.svg" alt="knapsack.svg" class="org-svg" height="180px" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Knapsack Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Knapsack.svg">wikimedia commons</a>).</p>
+</div>
 
-<div id="org8e737f0" class="figure">
-<p><img src="./img/logo_univie.png" alt="logo_univie.png" width="200px" />
+<div id="org26b1961" class="figure">
+<p><img src="./svg/traveling_salesman.svg" alt="traveling_salesman.svg" class="org-svg" height="180px" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Traveling Salesman Problem (source: <a href="https://commons.wikimedia.org/wiki/File:GLPK_solution_of_a_travelling_salesman_problem.svg">wikimedia commons</a>).</p>
+</div>
+
+<div id="orge0abd89" class="figure">
+<p><img src="./svg/minimum_spanning_tree.svg" alt="minimum_spanning_tree.svg" class="org-svg" height="180px" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Minimum Spanning Tree Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Minimum_spanning_tree.svg">wikimedia commons</a>).</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;max-height:60%">
+<ul>
+<li class="fragment">Widespread (logistics, etc)</li>
+<li class="fragment">Can be solved by machines optimally</li>
+<li class="fragment">Can be solved by humans (if small enough)</li>
+
+</ul>
+<p class="fragment (t)">
+&rarr; <b><b>Good setting for human-machine collaboration</b></b>
 </p>
 </div>
-<ul>
-<li>AAA</li>
-<li>BBB</li>
-<li>CCC</li>
-<li>DDD</li>
-
-</ul>
-<div>
-<ul>
-<li>EEE</li>
-<li>FFF</li>
-
-</ul>
 </div>
-</div>
-
 </section>
 </section>
 <section>
-<section id="slide-org93f6be8">
-<h2 id="org93f6be8">Source code</h2>
-<div class="org-src-container">
-
-<pre class="src src-python"><span class="linenr">1: </span><span style="color: #ff79c6;">import</span> numpy <span style="color: #ff79c6;">as</span> np
-<span class="linenr">2: </span>
-<span class="linenr">3: </span>np.random.seed<span style="color: #61bfff;">(</span>12<span style="color: #61bfff;">)</span>
-<span class="linenr">4: </span><span style="color: #ffc9e8;">x</span> = np.random.randint<span style="color: #61bfff;">(</span>100<span style="color: #61bfff;">)</span>
-<span class="linenr">5: </span><span style="color: #ffb86c;">print</span><span style="color: #61bfff;">(</span>x<span style="color: #61bfff;">)</span>
-</pre>
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-org1d8c954">
-<h2 id="org1d8c954">Equations</h2>
-<ul>
-<li>Here is an inline equation: \( E = mc^2 \).</li>
-<li>Here is a displayed equation:
-\[
-    a^2 + b^2 = c^2
-    \]</li>
-
-</ul>
-</section>
-</section>
-<section>
-<section id="slide-org9d407aa">
-<h2 id="org9d407aa">Use References</h2>
+<section id="slide-orgffd26c0">
+<h2 id="orgffd26c0">Use References</h2>
 <ul>
 <li>(<a href="#citeproc_bib_item_6">Ott &#38; Jäkel, 2023</a>)</li>
 <li>(<a href="#citeproc_bib_item_3">Lage et al., 2018</a>)</li>

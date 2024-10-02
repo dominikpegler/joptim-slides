@@ -2,6 +2,7 @@
 :root {
     --r-heading-font: Roboto, "Source Sans Pro", Helvetica;
     --r-main-font: Roboto, "Source Sans Pro", Helvetica;
+    -- --r-block-margin: 0;
 }
 
 /* Ensure the overall slides container is top-aligned */
@@ -26,9 +27,16 @@ h2 {
 }
 
 .figure {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 1rem !important;
     line-height: 1.2 !important;
     text-align: left;
     
+}
+
+.figure-number {
+    font-weight:bold;
 }
