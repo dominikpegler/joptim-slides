@@ -1,0 +1,22 @@
+/* Override the default font family variables */
+:root {
+    --r-heading-font: Roboto, "Source Sans Pro", Helvetica;
+    --r-main-font: Roboto, "Source Sans Pro", Helvetica;
+}
+
+/* Ensure the overall slides container is top-aligned */
+.reveal .slides {
+    margin-top: 0 !important; /* Ensure no unwanted margin is added on top */
+}
+
+/* Ensure individual slides are not vertically centered (if that's enforced by any Reveal.js styles) */
+.reveal .slide {
+    padding-top: 0 !important; /* Ensure consistent padding */
+    height: auto !important; /* Reset any auto height behavior */
+}
+
+/* Optional: Adjust the top margin of headings to avoid overlapping with other elements */
+.reveal .slide h1, .reveal .slide h2, .reveal .slide h3 {
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center; /* Center-align the titles */
+}
