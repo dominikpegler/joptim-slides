@@ -19,7 +19,7 @@
 #+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number: t
 #+OPTIONS: reveal_width:1200 reveal_height:800 reveal_center:t
 #+BIBLIOGRAPHY: /home/user/Dropbox/org/ref/ref.bib
-#+cite_export: csl
+#+cite_export: csl apa.csl
 # #+REVEAL_HTML_HEAD: <style> /* Import custom fonts as needed */ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); body {font-family: 'Roboto', sans-serif;} h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif; font-weight: 700; /* Use bold for headings */} p {font-family: 'Roboto', sans-serif; font-weight: 400;} </style>
 #+REVEAL_EXTRA_CSS: css/custom.css
 * Problem Setting
@@ -94,5 +94,7 @@ print(x)
    :END:
 
 # adjust font-size and line-width and in css/custom.css if you cannot put all references on 1 slide. a better solution that allows splitting the bibliography across slides still needs to be found. 
-   
+
+# note: this uses apa.csl which is downloaded from the zotero style repository and makes sure that the bibliography is formatted correctly. https://www.zotero.org/styles
+
 #+print_bibliography:
