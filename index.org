@@ -16,12 +16,23 @@
 #+REVEAL_MARGIN: 0.1
 # +reveal_slide_footer: <div>Footer</div>
 #+reveal_single_file: t
-#+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number: t
+#+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number:t
 #+OPTIONS: reveal_width:1200 reveal_height:800 reveal_center:t
 #+BIBLIOGRAPHY: /home/user/Dropbox/org/ref/ref.bib
 #+cite_export: csl apa.csl
 # #+REVEAL_HTML_HEAD: <style> /* Import custom fonts as needed */ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); body {font-family: 'Roboto', sans-serif;} h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif; font-weight: 700; /* Use bold for headings */} p {font-family: 'Roboto', sans-serif; font-weight: 400;} </style>
 #+REVEAL_EXTRA_CSS: css/custom.css
+#+REVEAL_EXTRA_OPTIONS: display: 'flex'
+
+# some more info:
+# - https://github.com/emacsmirror/org-re-reveal
+# - https://revealjs.com/config/
+# - https://earvingad.github.io/posts/img/orgreveal/orgreveal.html
+# - https://ertwro.github.io/githubppt/Readmeofficial.html
+
+# on how to create reusable css classes
+# - https://www.gibiris.org/eo-blog/posts/2022/09/28_org-reveal-and-gridded-layouts.html
+
 * Problem Setting
 
 #+begin_notes
@@ -32,13 +43,14 @@ Today, I am going to present you a new study on the topic of human-machine colab
 *Machine Problem-Solving*
 #+ATTR_REVEAL: :frag (t)
   - Increasingly taking over human domains
-  - Recent years: GenAI \to black boxes \to lack of trust
+  - AI getting more complex \to black boxes \to lack of trust
   - Trust issues not new (Classical AI in 1950s) 
 #+ATTR_REVEAL: :frag (t)
-*Interpretability*
+*Evaluating Human Interpretability*
 #+ATTR_REVEAL: :frag (t)
-  - Human-in-the-loop approach to evaluate human interpretability
-  - Important for trust and improving colaboration with machines
+  - Human-in-the-loop approach to evaluate interpretability
+  - Understanding how a machine makes a decision
+  - Critical for trust and collaboration with machines
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="float: right; width: 20%">
 
@@ -62,9 +74,9 @@ file:./svg/minimum_spanning_tree.svg
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-height:60%">
 #+ATTR_REVEAL: :frag (t)
-  - Widespread (logistics, etc)
-  - Can be solved by machines optimally
-  - Can be solved by humans (if small enough)
+  - Many real-world scenarios (logistics, etc.)
+  - Can be solved by machines optimally (e.g., with Linear Programming)
+  - Can be solved by humans (if problem is small enough)
 #+ATTR_REVEAL: :frag (t)
   \to **Good setting for human-machine collaboration**
 #+REVEAL_HTML: </div>
@@ -90,6 +102,22 @@ file:./svg/minimum_spanning_tree.svg
 - FFF
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
+
+* Bin-Packing Problem
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
+#+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
+#+ATTR_REVEAL: :frag (t)
+- Abstract representation of real-world scenarios (e.g., scheduling)
+- Pack items into boxes
+- Goal: Fill the boxes as much as possible
+- Constraint: You cannot overfill the boxes
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-width:30%">
+#+caption: A human performing the bin packing task.
+ file:./img/binpacking.gif
+ #+REVEAL_HTML: </div>
+ #+REVEAL_HTML: </div>
 
 * Source code :noexport:
 #+begin_src python -n :results output
