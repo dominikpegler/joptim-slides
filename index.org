@@ -107,7 +107,6 @@ file:./svg/minimum_spanning_tree.svg
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
-#+ATTR_REVEAL: :frag (t)
 - Abstract representation of real-world scenarios (e.g., scheduling)
 - Pack items into boxes
 - Goal: Fill the boxes as much as possible
@@ -119,6 +118,44 @@ file:./svg/minimum_spanning_tree.svg
  #+REVEAL_HTML: </div>
  #+REVEAL_HTML: </div>
 
+* Optimal Solutions
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width:  100%;top: 0;position: fixed;justify-content: flex-end;align-items: center;">
+
+#+ATTR_HTML: :height 600px :margin-top 0px :margin-bottom 0px
+#+caption: The machine ([[https://developers.google.com/optimization/cp/cp_solver][CP-SAT]]) providing possible optimal solutions.
+ file:./img/optimalsolutions.gif
+#+REVEAL_HTML: </div>
+
+# this variable defines how the figure is exported to html: oer-reveal--figure-div-template. It includes bare <p> tags which does not allow for further customization using css, so we will add a class to it to make this possible through custom.css.
+
+* Research Question
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width: 100%;justify-content: flex-end;align-items: center;">
+
+*"What makes a solution interpretable?"*
+
+#+REVEAL_HTML: </div>
+
+* H1: Heuristic
+- Humans use heuristics to solve these problems, i.e., a greedy heuristic
+- ...
+- *\to Solutions more interpretable the more similar they are to the greedy solution*
+  
+* H2: Simplicity
+- ...
+- ...
+- *\to Solutions more interpretable the simpler they are*
+  
+* H3: Visual Representation
+- Focus on order
+- Items and boxes can be sorted by size or at random
+- *\to Solutions more interpretable if they sorted*
+  
+* Online Experiment
+* Online Experiment 
+* Results
+* Limitations
+* Takeaways
 * Source code :noexport:
 #+begin_src python -n :results output
 import numpy as np
