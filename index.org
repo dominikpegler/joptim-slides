@@ -23,6 +23,7 @@
 # #+REVEAL_HTML_HEAD: <style> /* Import custom fonts as needed */ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); body {font-family: 'Roboto', sans-serif;} h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif; font-weight: 700; /* Use bold for headings */} p {font-family: 'Roboto', sans-serif; font-weight: 400;} </style>
 #+REVEAL_EXTRA_CSS: css/custom.css
 #+REVEAL_EXTRA_OPTIONS: display: 'flex'
+#+REVEAL_EXTERNAL_PLUGINS: ((diagram . "{src: \"%splugin/diagram/revealjs-diagram.js\", condition: function() { return !!document.querySelector('[data-diagram]'); }}"))
 
 # some more info:
 # - https://github.com/emacsmirror/org-re-reveal
@@ -32,6 +33,12 @@
 
 # on how to create reusable css classes
 # - https://www.gibiris.org/eo-blog/posts/2022/09/28_org-reveal-and-gridded-layouts.html
+
+# TODO: check how to insert image licenses using templates
+# TODO: how to create simple diagrams with diagram+d3js plugins
+# TODO: split bibliography if it gets too long
+# TODO: find simpler way to create (css classes?) to particular slide layouts
+# TODO: use an alternative to "position: fixed" to make PDF export work
 
 * Problem Setting
 
@@ -59,7 +66,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
  file:./img/dantzig.jpg
 
  #+REVEAL_HTML: </div>
-* Combinatorial Problem Solving
+* Combinatorial Design Problems
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 #+ATTR_HTML: :height 180px
@@ -81,28 +88,6 @@ file:./svg/minimum_spanning_tree.svg
   \to **Good setting for human-machine collaboration**
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
-* Combinatorial Problem Solving :noexport:
-#+REVEAL_HTML: <div style="display: grid; grid-template-columns: auto auto auto;">
-
-#+ATTR_HTML: :height 100px
-#+caption: Knapsack Problem.(Source: [[https://commons.wikimedia.org/wiki/File:Knapsack.svg][wikimedia commons]]).
-file:./svg/knapsack.svg
-#+ATTR_HTML: :height 100px
-#+caption: Traveling Salesman Problem.(Source: [[https://commons.wikimedia.org/wiki/File:GLPK_solution_of_a_travelling_salesman_problem.svg][wikimedia commons]]).
-file:./svg/traveling_salesman.svg
-#+ATTR_HTML: :height 100px :width 100px
-#+caption: Minimum Spanning Tree Problem.(Source: [[https://commons.wikimedia.org/wiki/File:Minimum_spanning_tree.svg][wikimedia commons]]).
-file:./svg/minimum_spanning_tree.svg
-- AAA
-- BBB
-- CCC
-- DDD
-#+REVEAL_HTML: <div>
-- EEE
-- FFF
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: </div>
-
 * Bin-Packing Problem
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
@@ -152,6 +137,9 @@ file:./svg/minimum_spanning_tree.svg
 - *\to Solutions more interpretable if they sorted*
   
 * Online Experiment
+
+#+REVEAL_HTML:<section> <div class="fig-container" data-fig-id="fig-collision-detection" data-file="diagram.html"></div> </section>
+  
 * Online Experiment 
 * Results
 * Limitations
@@ -174,7 +162,7 @@ print(x)
     \[
     a^2 + b^2 = c^2
     \]
-* Use References
+* Example References :noexport:
 
 - [cite:@ottSimplifExSimplifyingExplaining2023]
 - [cite:@lageHumanintheloopInterpretabilityPrior2018]

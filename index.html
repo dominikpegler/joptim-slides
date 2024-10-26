@@ -19,10 +19,9 @@
 <section id="sec-title-slide">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems</h3><p style="margin-top:4rem;">D. Pegler, D. Steyrl, F. Scharnowski, &amp; F. Melinscak</p></div></div>
 </section>
-
 <section>
-<section id="slide-orgf683ef6">
-<h2 id="orgf683ef6">Problem Setting</h2>
+<section id="slide-orge5376be">
+<h2 id="orge5376be">Problem Setting</h2>
 <aside class="notes">
 <p>
 Today, I am going to present you a new study on the topic of human-machine colaboration.
@@ -53,7 +52,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 <div style="float: right; width: 20%">
 
 
-<div id="org0fe1915" class="figure">
+<div id="orgda81b12" class="figure">
 <p class="org-p-fig"><img src="./img/dantzig.jpg" alt="dantzig.jpg" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 1: </span>George Dantzig, father of linear programming (Source: <a href="https://malevus.com/george-dantzig">malevus.com</a>).</p>
@@ -63,24 +62,24 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-orgdf15d7f">
-<h2 id="orgdf15d7f">Combinatorial Problem Solving</h2>
+<section id="slide-org4fc5364">
+<h2 id="org4fc5364">Combinatorial Design Problems</h2>
 <div style="display:flex;flex-direction:column;height: 100%">
 <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 
-<div id="org12adffe" class="figure">
+<div id="org6f7dd40" class="figure">
 <p class="org-p-fig"><img src="./svg/knapsack.svg" alt="knapsack.svg" class="org-svg" height="180px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 2: </span>Knapsack Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Knapsack.svg">wikimedia commons</a>).</p>
 </div>
 
-<div id="org9597eb2" class="figure">
+<div id="orgef1aba1" class="figure">
 <p class="org-p-fig"><img src="./svg/traveling_salesman.svg" alt="traveling_salesman.svg" class="org-svg" height="180px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 3: </span>Traveling Salesman Problem (source: <a href="https://commons.wikimedia.org/wiki/File:GLPK_solution_of_a_travelling_salesman_problem.svg">wikimedia commons</a>).</p>
 </div>
 
-<div id="org8b8375b" class="figure">
+<div id="org2718ddf" class="figure">
 <p class="org-p-fig"><img src="./svg/minimum_spanning_tree.svg" alt="minimum_spanning_tree.svg" class="org-svg" height="180px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 4: </span>Minimum Spanning Tree Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Minimum_spanning_tree.svg">wikimedia commons</a>).</p>
@@ -101,8 +100,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-org9ab1db9">
-<h2 id="org9ab1db9">Bin-Packing Problem</h2>
+<section id="slide-orgf6e7389">
+<h2 id="orgf6e7389">Bin-Packing Problem</h2>
 <div style="display:flex;flex-direction:row;width: 100%">
 <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
 <ul>
@@ -115,34 +114,32 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </div>
 <div style="display:flex;flex-direction:column;max-width:30%">
 
-<div id="orgb76fdc5" class="figure">
+<div id="org79ebda7" class="figure">
 <p class="org-p-fig"><img src="./img/binpacking.gif" alt="binpacking.gif" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 5: </span>A human performing the bin packing task.</p>
 </div>
 </div>
 </div>
-
 </section>
 </section>
 <section>
-<section id="slide-org99c5777">
-<h2 id="org99c5777">Optimal Solutions</h2>
+<section id="slide-org0d89fb8">
+<h2 id="org0d89fb8">Optimal Solutions</h2>
 <div style="display:flex;flex-direction:column;height: 100%;width:  100%;top: 0;position: fixed;justify-content: flex-end;align-items: center;">
 
 
-<div id="orgd678309" class="figure">
+<div id="orgc0ea423" class="figure">
 <p class="org-p-fig"><img src="./img/optimalsolutions.gif" alt="optimalsolutions.gif" height="600px" margin-top="0px" margin-bottom="0px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 6: </span>The machine (<a href="https://developers.google.com/optimization/cp/cp_solver">CP-SAT</a>) providing possible optimal solutions.</p>
 </div>
 </div>
-
 </section>
 </section>
 <section>
-<section id="slide-org7184e5f">
-<h2 id="org7184e5f">Research Question</h2>
+<section id="slide-orgc42101e">
+<h2 id="orgc42101e">Research Question</h2>
 <div style="display:flex;flex-direction:column;height: 100%;width: 100%;justify-content: flex-end;align-items: center;">
 
 <p>
@@ -150,97 +147,71 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </p>
 
 </div>
-
 </section>
 </section>
 <section>
-<section id="slide-org56db259">
-<h2 id="org56db259">H1: Heuristic</h2>
+<section id="slide-orgc184755">
+<h2 id="orgc184755">H1: Heuristic</h2>
 <ul>
 <li>Humans use heuristics to solve these problems, i.e., a greedy heuristic</li>
 <li>&#x2026;</li>
 <li><b>&rarr; Solutions more interpretable the more similar they are to the greedy solution</b></li>
 
 </ul>
-
 </section>
 </section>
 <section>
-<section id="slide-orgf2cf0ec">
-<h2 id="orgf2cf0ec">H2: Simplicity</h2>
+<section id="slide-org22c1b53">
+<h2 id="org22c1b53">H2: Simplicity</h2>
 <ul>
 <li>&#x2026;</li>
 <li>&#x2026;</li>
 <li><b>&rarr; Solutions more interpretable the simpler they are</b></li>
 
 </ul>
-
 </section>
 </section>
 <section>
-<section id="slide-org8064738">
-<h2 id="org8064738">H3: Visual Representation</h2>
+<section id="slide-org1372947">
+<h2 id="org1372947">H3: Visual Representation</h2>
 <ul>
 <li>Focus on order</li>
 <li>Items and boxes can be sorted by size or at random</li>
 <li><b>&rarr; Solutions more interpretable if they sorted</b></li>
 
 </ul>
-
 </section>
 </section>
 <section>
-<section id="slide-org90d317e">
-<h2 id="org90d317e">Online Experiment</h2>
+<section id="slide-org67a6c41">
+<h2 id="org67a6c41">Online Experiment</h2>
+<section> <div class="fig-container" data-fig-id="fig-collision-detection" data-file="diagram.html"></div> </section>
 </section>
 </section>
 <section>
-<section id="slide-org7cd0b07">
-<h2 id="org7cd0b07">Online Experiment</h2>
+<section id="slide-orge0f868e">
+<h2 id="orge0f868e">Online Experiment</h2>
 </section>
 </section>
 <section>
-<section id="slide-org838eeb4">
-<h2 id="org838eeb4">Results</h2>
+<section id="slide-org57b8f54">
+<h2 id="org57b8f54">Results</h2>
 </section>
 </section>
 <section>
-<section id="slide-org1dda70b">
-<h2 id="org1dda70b">Limitations</h2>
+<section id="slide-orgd4e0165">
+<h2 id="orgd4e0165">Limitations</h2>
 </section>
 </section>
 <section>
-<section id="slide-org4b76e91">
-<h2 id="org4b76e91">Takeaways</h2>
-</section>
-</section>
-<section>
-<section id="slide-orgabdd2a9">
-<h2 id="orgabdd2a9">Use References</h2>
-<ul>
-<li>(<a href="#citeproc_bib_item_6">Ott &#38; Jäkel, 2023</a>)</li>
-<li>(<a href="#citeproc_bib_item_3">Lage et al., 2018</a>)</li>
-<li>(<a href="#citeproc_bib_item_7">Wynn et al., 2023</a>)</li>
-<li>(<a href="#citeproc_bib_item_5">Murawski &#38; Bossaerts, 2016</a>)</li>
-<li>(<a href="#citeproc_bib_item_2">Franco et al., 2022</a>)</li>
-<li>(<a href="#citeproc_bib_item_1">Dumnić et al., 2019</a>)</li>
-<li>(<a href="#citeproc_bib_item_4">MacGregor &#38; Chu, 2011</a>)</li>
-
-</ul>
-
+<section id="slide-org8dc3235">
+<h2 id="org8dc3235">Takeaways</h2>
 </section>
 </section>
 <section>
 <section id="slide-bibliography">
 <h2 id="bibliography">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Dumnić, S., Dupljanin, D., Božović, V., &#38; Ćulibrk, D. (2019). PathGame: Crowdsourcing time-constrained human solutions for the travelling salesperson problem. <i>Computational Intelligence and Neuroscience</i>, <i>2019</i>, 1–9. <a href="https://doi.org/10.1155/2019/2351591">https://doi.org/10.1155/2019/2351591</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Franco, J. P., Doroc, K., Yadav, N., Bossaerts, P., &#38; Murawski, C. (2022). Task-independent metrics of computational hardness predict human cognitive performance. <i>Scientific Reports</i>, <i>12</i>(1, 1), 12914. <a href="https://doi.org/10.1038/s41598-022-16565-w">https://doi.org/10.1038/s41598-022-16565-w</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Lage, I., Ross, A., Gershman, S. J., Kim, B., &#38; Doshi-Velez, F. (2018). Human-in-the-loop interpretability prior. <i>Advances in Neural Information Processing Systems</i>, <i>31</i>, 10180–10189. <a href="https://proceedings.neurips.cc/paper_files/paper/2018/hash/0a7d83f084ec258aefd128569dda03d7-Abstract.html">https://proceedings.neurips.cc/paper_files/paper/2018/hash/0a7d83f084ec258aefd128569dda03d7-Abstract.html</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>MacGregor, J. N., &#38; Chu, Y. (2011). Human performance on the traveling salesman and related problems: A review. <i>The Journal of Problem Solving</i>, <i>3</i>(2). <a href="https://doi.org/10.7771/1932-6246.1090">https://doi.org/10.7771/1932-6246.1090</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Murawski, C., &#38; Bossaerts, P. (2016). How humans solve complex problems: The case of the knapsack problem. <i>Scientific Reports</i>, <i>6</i>(1, 1), 34851. <a href="https://doi.org/10.1038/srep34851">https://doi.org/10.1038/srep34851</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>Ott, C., &#38; Jäkel, F. (2023). <i>SimplifEx: Simplifying and explaining linear programs</i>. <a href="https://osf.io/v4xmc/">https://osf.io/v4xmc/</a></div>
-  <div class="csl-entry"><a id="citeproc_bib_item_7"></a>Wynn, A., Sucholutsky, I., &#38; Griffiths, T. L. (2023, December 21). <i>Learning Human-like Representations to Enable Learning Human Values</i>. <a href="https://doi.org/10.48550/arXiv.2312.14106">https://doi.org/10.48550/arXiv.2312.14106</a></div>
 </div>
 </section>
 </section>
@@ -281,7 +252,7 @@ plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
 
 // Optional libraries used to extend reveal.js
 dependencies: [
-]
+{src: "./reveal.js/plugin/diagram/revealjs-diagram.js", condition: function() { return !!document.querySelector('[data-diagram]'); }}]
 
 });
 </script>
